@@ -57,14 +57,18 @@
 
         <!--設定一個實體給攝影機-->
         <a-entity camera>
-
+            <a-cursor></a-cursor>
         </a-entity>
 
     </a-scene>
 
 </body>
     <script>
+        var audio_name = document.gatElementById("box");
 
+        audio_name.addEventListener("mouseenter", function () {
+            console.log("滑鼠進入了");
+        })
     </script>
 
 </html>
