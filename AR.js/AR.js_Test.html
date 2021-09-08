@@ -15,7 +15,11 @@
             <!--設定貼圖-->
             <img id="brick_wall" src="assets/image/brick_wall_003_diffuse_1k.jpg" />
             <img id="square_floor" src="assets/image/square_floor_diff_1k.jpg" />
+            <!--設定模型-->
             <a-assets-item id="tree" src="assets/models/tree.gltf"></a-assets-item>
+            <!--設定音效-->
+            <audio id="Sunspots" src="assets/Audio/Sunspots.ogg" ></audio>
+
         </a-assets>
 
         <!--設定在kanji.patt的圖像上，生成一個box-->
@@ -36,7 +40,8 @@
             <a-entity position="0 0 0"
                       rotarion="0 0 0"
                       scale="0.2 0.2 0.2"
-                      gltf-model="#tree">
+                      gltf-model="#tree"
+                      sounds="src:#Sunspots">
 
             </a-entity>
 
