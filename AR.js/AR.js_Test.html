@@ -25,17 +25,17 @@
         </a-assets>
 
         <!--設定在hiro.patt的圖像上，生成一個box-->
-        <a-marker typeof="pattern" url="data/hiro.patt">
+        <!--
+    <a-marker typeof="pattern" url="data/hiro.patt">
 
-            <a-entity>
-                <a-box id="box" src="#brick_wall" position="0 0.5 0" rotation="0 45 0"
-                       color="blue" opecity="0.5" sound="src:#Sunspots;loop:true" >
+        <a-entity>
+            <a-box id="box" src="#brick_wall" position="0 0.5 0" rotation="0 45 0"
+                   color="blue" opecity="0.5" sound="src:#Sunspots;loop:true" >
 
-                </a-box>
-            </a-entity>
+            </a-box>
+        </a-entity>
 
-        </a-marker>
-
+    </a-marker>-->
         <!--設定在kanji.patt的圖像上，生成一個box-->
 
         <a-marker typeof="pattern" url="data/kanji.patt">
@@ -51,11 +51,18 @@
 
         <!--設定在hiro.patt的圖像上，生成一個box-->
 
-        <a-marker typeof="pattern" url="data/letterA.patt">
+        <a-marker typeof="pattern" url="data/hiro.patt">
 
             <a-entity animation="property:rotation; to:0 360 0 ; loop:true ; dur:5000 ; easing:linear;">
-                <a-sphere id="sphere" src="#earth" position="0 0.5 0" rotation="0 45 0"
-                       scale="0.5 0.5 0.5" opecity="1" sound="src:#Sunspots;loop:ture">
+                <a-sphere id="earth" src="#earth" position="0 0.5 0" rotation="0 45 0"
+                          scale="0.5 0.5 0.5" opecity="1" sound="src:#Sunspots;loop:ture">
+
+                </a-sphere>
+
+            </a-entity>
+            <a-entity animation="property:rotation; to:0 360 0 ; loop:true ; dur:5000 ; easing:linear;">
+                <a-sphere id="moon" src="#earth" position="2 0.5 0" rotation="0 45 0"
+                          scale="0.3 0.3 0.3" opecity="1" sound="src:#Sunspots;loop:ture">
 
                 </a-sphere>
 
@@ -72,7 +79,7 @@
 
 </body>
     <script>
-        var audio_name = document.gatElementById("box");
+        var audio_name = document.gatElementById("earth");
 
         audio_name.addEventListener("mouseenter", function () {
             console.log("滑鼠進入了");
