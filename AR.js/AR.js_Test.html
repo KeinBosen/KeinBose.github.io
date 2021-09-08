@@ -17,6 +17,7 @@
             <img id="square_floor" src="assets/image/square_floor_diff_1k.jpg" />
             <img id="img_earth" src="assets/image/earth.jpg" />
             <img id="img_moon" src="assets/image/moon.jpg" />
+            <img id="img_quest" src="assets/image/question.png" />
             <!--設定模型-->
             <a-assets-item id="tree" src="assets/models/tree.gltf"></a-assets-item>
             <!--設定音效-->
@@ -54,18 +55,23 @@
         <a-marker typeof="pattern" url="data/hiro.patt">
 
             <a-entity animation="property:rotation; to:0 360 0 ; loop:true ; dur:5000 ; easing:linear;">
-                <a-sphere id="earth" src="#img_earth" position="0 0.5 0" rotation="0 45 0"
-                          scale="0.5 0.5 0.5" opecity="1" sound="src:#Sunspots;loop:ture">
+                <a-sphere id="earth" src="#img_earth" position="0 2 0" rotation="0 45 0"
+                          scale="0.5 0.5 0.5" opecity="1" sound="src:#Sunspots;loop:ture"
+                          visible="false">
 
                 </a-sphere>
 
             </a-entity>
             <a-entity animation="property:rotation; to:0 360 0 ; loop:true ; dur:5000 ; easing:linear;">
-                <a-sphere id="moon" src="#img_moon" position="2 0.5 0" rotation="0 45 0"
+                <a-sphere id="moon" src="#img_moon" position="2 2 0" rotation="0 45 0"
                           scale="0.3 0.3 0.3" opecity="1">
 
                 </a-sphere>
 
+            </a-entity>
+
+            <a-entity id="event_quest" position="0 0.5 0" scale="0.5 0.5 0.5">
+                <a-image src="#img_quest"></a-image>
             </a-entity>
 
             <!--<a-light id="light_dir" type="directional"
@@ -80,16 +86,18 @@
                          distance: 100; decay: 4;>
                 </a-light>
     -->
-            <!--
+            
                 <a-light id="light_spot" type="spot"
                          position="0 3 4" rotation="0 0 0" angle="90"
                          intensty="0.5" distance: 100; decay: 4;>
                 </a-light>
+    
+            <!--
+                <a-light id="light_hem" type="hemisphere"
+                    position="0 3 4" rotation="0 0 0" intensty="0.8"
+                    color="blue" background="red">
+                </a-light>
     -->
-            <a-light id="light_hem" type="hemisphere"
-                position="0 3 4" rotation="0 0 0" intensty="0.8"
-                color="blue" background="red">
-            </a-light>
         </a-marker>
 
         <!--設定一個實體給攝影機-->
