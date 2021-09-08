@@ -18,22 +18,7 @@
             <a-assets-item id="tree" src="assets/models/tree.gltf"></a-assets-item>
         </a-assets>
 
-        <!--設定在hiro.patt的圖像上，生成一個box-->
-
-        <a-marker typeof="pattern" url="data/hiro.patt">
-
-            
-
-            <a-entity position="0 0 0"
-                      rotarion="0 0 0"
-                      scale="0.2 0.2 0.2"
-                      gltf-model="#tree">
-
-            </a-entity>
-
-        </a-marker>
         <!--設定在kanji.patt的圖像上，生成一個box-->
-        
         <a-marker typeof="pattern" url="data/letterA.patt">
 
             <a-entity>
@@ -43,6 +28,22 @@
             </a-entity>
 
         </a-marker>
+
+        <!--設定在hiro.patt的圖像上，生成一個box-->
+
+        <a-marker typeof="pattern" url="data/hiro.patt">
+
+
+
+            <a-entity position="0 0 0"
+                      rotarion="0 0 0"
+                      scale="0.2 0.2 0.2"
+                      gltf-model="#tree">
+
+            </a-entity>
+
+        </a-marker>
+
         <!--設定一個實體給攝影機-->
         <a-entity camera>
 
