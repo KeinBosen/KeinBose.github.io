@@ -170,7 +170,8 @@ class App{
     }
     
     requestHitTestSource(){
-        
+
+		//測試命中來源
 		const self = this;
 		
 		const session = this.renderer.xr.getSession();
