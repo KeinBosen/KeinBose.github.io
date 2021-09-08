@@ -200,7 +200,8 @@ class App{
 	}
     
     getHitTestResults( frame ){
-        
+
+		//獲取命中結果
 		const hitTestResults = frame.getHitTestResults(this.hitTestSource);
 		
 		if(hitTestResults.length){
