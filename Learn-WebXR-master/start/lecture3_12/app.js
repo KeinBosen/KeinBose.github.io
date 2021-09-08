@@ -131,7 +131,7 @@ class App{
 		this.scene.add(this.reticle);
 
 		//²K¥[¤è¶ô
-		this.geometry = new THREE.BoxBufferGeometry(0.8,1.2,0.8);
+		this.geometry = new THREE.BoxBufferGeometry(0.4,0.6,0.4);
 		this.meshes = [];
 		
 		this.loadKnight();
