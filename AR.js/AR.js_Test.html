@@ -18,6 +18,7 @@
             <img id="img_earth" src="assets/image/earth.jpg" />
             <img id="img_moon" src="assets/image/moon.jpg" />
             <img id="img_quest" src="assets/image/question.png" />
+            <img id="img_info_earth" src="assets/image/地球earth.png" />
             <!--設定模型-->
             <a-assets-item id="tree" src="assets/models/tree.gltf"></a-assets-item>
             <!--設定音效-->
@@ -57,7 +58,7 @@
             <a-entity animation="property:rotation; to:0 360 0 ; loop:true ; dur:5000 ; easing:linear;">
                 <a-sphere id="earth" src="#img_earth" position="0 2 0" rotation="0 45 0"
                           scale="0.5 0.5 0.5" opecity="1" sound="src:#Sunspots;loop:ture"
-                          visible="false">
+                          visible="true">
 
                 </a-sphere>
 
@@ -74,6 +75,10 @@
                 <a-image src="#img_quest"></a-image>
             </a-entity>
 
+            <a-entity id="event_info_earth" position="0 4 0" scale="1 1 1" visible="false">
+                <a-image src="#img_info_earth"></a-image>
+            </a-entity>
+
             <!--<a-light id="light_dir" type="directional"
      position="5 5 5" rotation="0 0 0" target="#directionaltarget">
     <a-entity id="directionaltarget" position="0 -0.5 -0.5"></a-entity>
@@ -86,12 +91,12 @@
                          distance: 100; decay: 4;>
                 </a-light>
     -->
-            
-                <a-light id="light_spot" type="spot"
-                         position="0 3 4" rotation="0 0 0" angle="90"
-                         intensty="0.5" distance: 100; decay: 4;>
-                </a-light>
-    
+
+            <a-light id="light_spot" type="spot"
+                     position="0 3 4" rotation="0 0 0" angle="90"
+                     intensty="0.5" distance: 100; decay: 4;>
+            </a-light>
+
             <!--
                 <a-light id="light_hem" type="hemisphere"
                     position="0 3 4" rotation="0 0 0" intensty="0.8"
@@ -112,16 +117,27 @@
         var audio_name = document.gatElementById("earth");
 
         audio_name.addEventListener("mouseenter", function () {
-            console.log("滑鼠進入了");
-            alert("滑鼠進來囉");
+            //console.log("滑鼠進入了");
+            //alert("滑鼠進來囉");
             audio_name.components.sound.playSound();
         })
 
         audio_name.addEventListener("mouseleave", function () {
-            console.log("滑鼠離開了");
-            alert("滑鼠出去囉");
+            //console.log("滑鼠離開了");
+            //alert("滑鼠出去囉");
             audio_name.components.sound.stopSound();
         })
+
+        var event_earth_ui = document.getElementById("event_info_earth");
+        var event_quest_ui = document.getElementById("event_quest");
+
+        event_quest_ui.addEventListener("mouseenter", function () {
+            console.log("滑鼠進入了");
+            
+            event_earth_ui.setAttribute("visible",true);
+
+        });
+
     </script>
 
 </html>
