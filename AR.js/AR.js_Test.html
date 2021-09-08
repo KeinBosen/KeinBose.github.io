@@ -18,12 +18,12 @@
             <!--設定模型-->
             <a-assets-item id="tree" src="assets/models/tree.gltf"></a-assets-item>
             <!--設定音效-->
-            <audio id="Sunspots" src="assets/Audio/Sunspots.ogg" ></audio>
+            <audio id="Sunspots" src="assets/Audio/Sunspots.ogg"></audio>
 
         </a-assets>
 
-        <!--設定在kanji.patt的圖像上，生成一個box-->
-        <a-marker typeof="pattern" url="data/kanji.patt">
+        <!--設定在hiro.patt的圖像上，生成一個box-->
+        <a-marker typeof="pattern" url="data/hiro.patt">
 
             <a-entity>
                 <a-box id="box" src="#brick_wall" position="0 0.5 0" rotation="0 45 0" color="blue" opecity="0.5">
@@ -33,15 +33,15 @@
 
         </a-marker>
 
-        <!--設定在hiro.patt的圖像上，生成一個box-->
+        <!--設定在kanji.patt的圖像上，生成一個box-->
 
-        <a-marker typeof="pattern" url="data/hiro.patt">
+        <a-marker typeof="pattern" url="data/kanji.patt">
 
             <a-entity position="0 0 0"
                       rotarion="0 0 0"
                       scale="0.2 0.2 0.2"
                       gltf-model="#tree"
-                      sounds="src:#Sunspots">
+                      sound="src:#Sunspots">
 
             </a-entity>
 
@@ -49,7 +49,7 @@
 
         <!--設定在hiro.patt的圖像上，生成一個box-->
 
-        <a-marker typeof="pattern" url="data/letterB.patt">
+        <a-marker typeof="pattern" url="data/letterA.patt">
 
             <a-entity position="0 0 0"
                       rotarion="0 0 0"
@@ -74,6 +74,7 @@
         audio_name.addEventListener("mouseenter", function () {
             console.log("滑鼠進入了");
             alert("滑鼠進來囉");
+            audio_name.components.sound.playSound();
         })
     </script>
 
