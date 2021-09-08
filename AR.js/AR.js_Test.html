@@ -15,6 +15,8 @@
             <!--設定貼圖-->
             <img id="brick_wall" src="assets/image/brick_wall_003_diffuse_1k.jpg" />
             <img id="square_floor" src="assets/image/square_floor_diff_1k.jpg" />
+            <img id="img_earth" src="assets/image/earth.jpg" />
+            <img id="img_moon" src="assets/image/moon.jpg" />
             <!--設定模型-->
             <a-assets-item id="tree" src="assets/models/tree.gltf"></a-assets-item>
             <!--設定音效-->
@@ -26,7 +28,8 @@
         <a-marker typeof="pattern" url="data/hiro.patt">
 
             <a-entity>
-                <a-box id="box" src="#brick_wall" position="0 0.5 0" rotation="0 45 0" color="blue" opecity="0.5" sound="src:#Sunspots" >
+                <a-box id="box" src="#brick_wall" position="0 0.5 0" rotation="0 45 0"
+                       color="blue" opecity="0.5" sound="src:#Sunspots;loop:true" >
 
                 </a-box>
             </a-entity>
@@ -50,10 +53,11 @@
 
         <a-marker typeof="pattern" url="data/letterA.patt">
 
-            <a-entity position="0 0 0"
-                      rotarion="0 0 0"
-                      scale="0.2 0.2 0.2"
-                      gltf-model="#tree">
+            <a-entity animation="property:rotation; to:0 360 0 ; loop:true">
+                <a-sphere id="sphere" src="#earth" position="0 0.5 0" rotation="0 45 0"
+                        opecity="1" sound="src:#Sunspots;loop:ture">
+
+                </a-sphere>
 
             </a-entity>
 
