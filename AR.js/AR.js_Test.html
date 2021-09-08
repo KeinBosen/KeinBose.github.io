@@ -69,12 +69,17 @@
 
 </body>
     <script>
-        var audio_name = document.gatElementById("tree");
+        var audio_name = document.gatElementById("box");
 
         audio_name.addEventListener("mouseenter", function () {
             console.log("滑鼠進入了");
             alert("滑鼠進來囉");
             audio_name.components.sound.playSound();
+        })
+
+        audio_name.addEventListener("mouseleave", function () {
+            console.log("滑鼠離開了");
+            alert("滑鼠出去囉");
         })
     </script>
 
