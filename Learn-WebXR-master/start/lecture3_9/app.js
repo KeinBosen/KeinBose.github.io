@@ -42,7 +42,7 @@ class App{
     
     initScene(){
         //this.geometry = new THREE.BoxBufferGeometry(0.06, 0.06, 0.06); //創建一個方塊
-        this.geometry = new THREE.CylinderGeometry(0.06, 0.06, 0.01); //創建一個圓柱體
+        this.geometry = new THREE.CylinderGeometry(0.01, 0.01, 0.01); //創建一個圓柱體
         this.meshes = [];
     }
     
