@@ -15,19 +15,28 @@
             <!--設定貼圖-->
             <img id="brick_wall" src="assets/image/brick_wall_003_diffuse_1k.jpg" />
             <img id="square_floor" src="assets/image/square_floor_diff_1k.jpg" />
+            <a-assets-item id="tree" src="assets/models/tree.gltf"></a-assets-item>
         </a-assets>
 
         <!--設定在hiro.patt的圖像上，生成一個box-->
-        <!--
-    <a-marker typeof="pattern" url="data/hiro.patt">
+        
+        <a-marker typeof="pattern" url="data/hiro.patt">
 
-        <a-entity>
-            <a-box id="box" src="#brick_wall" position="0 0.5 0" rotation="0 45 0" color="blue" opecity="0.5">
+            <a-entity>
+                <!--<a-box id="box" src="#brick_wall" position="0 0.5 0" rotation="0 45 0" color="blue" opecity="0.5">
 
-            </a-box>
-        </a-entity>
+    </a-box>-->
+                
+            </a-entity>
 
-    </a-marker>-->
+            <a-entity position ="0 0 0"
+                      rotarion ="0 0 0"
+                      scale    ="0.2 0.2 0.2"
+                      gltf-modle="#tree">
+
+            </a-entity>
+
+        </a-marker>
         <!--設定在kanji.patt的圖像上，生成一個box-->
         <a-marker typeof="pattern" url="data/kanji.patt">
 
